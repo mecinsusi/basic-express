@@ -1,6 +1,6 @@
 import express, {Request, Response} from "express";
-import { router } from "./routes/inventory";
-import { routers } from "./routes/post";
+import {inventory_router} from "./routes/inventory";
+import {post_router} from "./routes/post";
 
     const app = express();
     var cors = require("cors");
@@ -130,9 +130,10 @@ export const dataInventory = [{
 
 ];
 
-app.use(router);
-app.use(routers);
+app.use(inventory_router);
+app.use(post_router);
+
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+console.log(`Listening on port ${port}`);
 });

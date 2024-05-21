@@ -131,8 +131,8 @@ exports.dataInventory = [{
         description: "Eiger warna hitam",
         picture: "https://pbs.twimg.com/media/EiSwKFkVoAAs6Wa.jpg" },
 ];
-app.use(inventory_1.router);
-app.use(post_1.routers);
+app.use(inventory_1.inventory_router);
+app.use(post_1.post_router);
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 });
